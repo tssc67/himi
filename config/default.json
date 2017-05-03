@@ -1,0 +1,14 @@
+{
+    "web":{
+        "port":8000,
+        "secret":"chittychattytalkywalky"
+    },
+    "gossip":{
+        "port":8080,
+        "password":"onlywecantalknotyou"
+    },
+    "healthcheck":{
+        "port":9090
+    },
+    "remote":"10.0.0.1"
+}

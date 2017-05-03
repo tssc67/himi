@@ -1,0 +1,26 @@
+{
+  "name": "himi",
+  "version": "0.0.1",
+  "description": "High availability live migration",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tssc67/himi.git"
+  },
+  "keywords": [
+    "HA",
+    "Proxy",
+    "live",
+    "migration"
+  ],
+  "author": "Teerapath Sujitto",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tssc67/himi/issues"
+  },
+  "homepage": "https://github.com/tssc67/himi#readme"
+}
