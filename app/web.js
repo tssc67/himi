@@ -16,8 +16,8 @@ app.disable('view cache');
 //     res.render('index');
 // });
 // require('./client.js')(wss);
-app.use(require('./api.js'));
+app.use('/api',require('./api.js'));
 
-exports.start = function(){
+exports.start = function(){ 
     server.listen(cfg.web.port);
 }

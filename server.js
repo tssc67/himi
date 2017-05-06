@@ -2,7 +2,6 @@ var http = require('http');
 global.cfg = require('config');
 global.failoverState = 'offline';
 const bluebird = require('bluebird');
-const redis = require("redis");
 const cluster = require('cluster');
 const numCPUs = require('os').cpus().length;
 var workers=[];
@@ -15,6 +14,7 @@ if(cluster.isMaster){
     var healthcheckServer = http.createServer(healthcheckHandler);
     gossipServer.listen(cfg.gossip.port);
     healthcheckServer.listen(cfg.healthcheck.port)
+    runServer();
 }  
 
 else{
@@ -63,7 +63,6 @@ var started = false;
 function runServer(){
     if(started)return;
     started = true;
-    setInterval(healthcheck,1000);
     workers.map(worker => worker.send('start'));
     console.log("Server is running");
 }
@@ -131,3 +130,4 @@ function replicate(){
     //     })
     // });
 }
+
