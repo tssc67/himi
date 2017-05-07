@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/tssc67/himi#readme",
   "dependencies": {
+    "bl": "^1.2.1",
     "bluebird": "^3.5.0",
     "body-parser": "^1.17.1",
     "config": "^1.26.1",
